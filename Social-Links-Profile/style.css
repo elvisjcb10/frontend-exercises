@@ -1,0 +1,70 @@
+:root{
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey-400: hsl(0, 4%, 68%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%); 
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Inter",cursive;
+    background-color: var(--grey-900);
+}
+.card{
+    color: var(--white);
+    background-color: var(--grey-800);
+    width: 90%;
+    margin: 80px auto;
+    max-width: 360px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 30px 0;
+
+}
+.card__img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0 0 25px 0;
+}
+.card__name{
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.card__location{
+    color: var(--green);
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+.card__job{
+    color: var(--grey-400);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.card__socials{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.card__social{
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--grey-700);
+    width: 80%;
+    padding: 15px 0;
+    margin: 0 auto;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+
+}
+.card__social:hover{
+    background-color: var(--green);
+    color: var(--grey-400);
+}
