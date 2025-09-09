@@ -1,0 +1,127 @@
+:root{
+    --Purple-700: hsl(257, 40%, 49%);
+    --Magenta-400: hsl(300, 69%, 71%);
+
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins',cursive;
+}
+.container{
+    max-width: 1440px;
+    background-color: var(--Purple-700);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.container__log{
+    background-image: url('images/bg-mobile.svg');
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+}
+.container__images{
+    width: 82%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 43px;
+
+
+}
+.container__illustration{
+    width: 100%;
+    max-width: 700px;
+}
+.container__logo{
+    width: 30%;
+    align-self: flex-start;
+}
+.container__description{
+    width: 82%;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+.container__title{
+    color: white;
+    font-weight: 550;
+}
+.container__text{
+    color: white;
+    font-size: .7rem;
+    font-weight: 300;
+}
+.container__button{
+    border: none;
+    color: var(--Purple-700);
+    border-radius: 20px;
+    padding: 9px 30px;
+    font-size: 10px;
+    font-family: inherit;
+    font-weight: 400;
+    width: 70%;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.584);
+}
+.container__icons{
+    display: flex;
+    gap: 20px;
+}
+ul {
+  list-style-type: none; 
+  padding: 0;            
+  margin: 0;             
+}
+.container__icon{
+    width: 20px;
+    margin: 30px 0px;
+    filter: invert(1);
+}
+@media(width>700px){
+    .container{
+        flex-direction: row;
+        height: 100vh;
+        background-image: url('images/bg-desktop.svg');
+        background-size: cover;
+        gap: 0;
+
+    }
+    .container__log{
+        width: 70%;
+        height: 100vh;
+        background-image: none;
+        align-items: center;
+    }
+    .container__images{
+        width: 80%;
+        gap: 20px;
+    }
+    .container__description{
+        width: 50%;
+        height: 100vh;
+        justify-content: center;
+        text-align: left;
+        padding-right: 30px;
+        gap: 10px;
+    }
+
+    .container__button{
+        width: 40%;
+        font-size: .6rem;
+        padding: 5px ;
+        align-self: start;
+    }
+    .container__icons{
+        align-self:flex-end;
+        justify-self: flex-end;
+    }
+}
