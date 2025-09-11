@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <article class="main">
+        <div class="main__ages">
+            <div class="main__age day">
+                <label class="text__age ">DAY</label>
+                <input type="number" required min="1" max="31" class="input__age days" placeholder="DD">
+                <span class="error-msg"></span>
+
+            </div>
+            <div class="main__age month">
+                <label class="text__age " >MONTH</label>
+                <input type="number"  required min="1" max="12" class="input__age months" placeholder="MM">
+                <span class="error-msg"></span>
+
+            </div>
+            <div class="main__age year">
+                <label class="text__age ">YEAR</label>
+                <input type="number" required min="1900"  class="input__age years" placeholder="YYYY">
+                <span class="error-msg"></span>
+
+            </div>
+        </div>
+        <div class="main__img">
+            <button type="submit" class="main__img-button"><img src="assets/images/icon-arrow.svg" alt=""></button>
+            <div class="line"></div>
+
+        </div>
+        <div class="main__description">
+            <p class="main__descriprion-text year"><b class="ryear">--</b>years</p>
+            <p class="main__descriprion-text months"><b class="rmonth">--</b>months</p>
+            <p class="main__descriprion-text day"><b class="rday">--</b>days</p>
+        </div>
+    </article>
+</body>
+    <script src="main.js"></script>
+</html>
