@@ -1,0 +1,244 @@
+:root{
+     /* Primary */
+
+--Purple_600: hsl(246, 80%, 60%);
+--Orange_300: hsl(15, 100%, 70%); /*work*/
+--Blue_300 : hsl(195, 74%, 62%);/* play*/
+--Pink_400 : hsl(348, 100%, 68%); /*study*/
+--Green_400 : hsl(145, 58%, 55%); /*exercise*/
+--Purple_700 : hsl(264, 64%, 52%); /*social*/
+--Yellow_300 : hsl(43, 84%, 65%); /*self care*/
+
+/* ### Neutral */
+
+--Navy_950: hsl(226, 43%, 10%);
+--Navy_900: hsl(235, 46%, 20%);
+--Purple_500: hsl(235, 45%, 61%);
+--Navy_200: hsl(236, 100%, 87%);
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Rubik',cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Navy_950);
+}
+.container{
+    width: 70%;
+    display: grid;
+    grid-template-areas: 
+    "main"
+    "report"
+    ;
+    gap: 20px;
+    margin: 80px 0;
+}
+.container__main{
+    grid-area:main;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Navy_900);
+    border-radius: 20px;
+
+}
+.img-person{
+    width: 75px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+.container__main-person{
+    border-radius: 20px;
+    padding: 35px 25px;
+    background-color: var(--Purple_600);
+    color: white;
+    display: flex;
+    gap:20px
+}
+.container__main-text{
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+}
+p{
+    font-weight: 300;
+    color: var(--Navy_200);
+}
+.name{
+   font-weight: 300;
+}
+.container__main-tracking{
+    padding: 25px;
+    background-color: var(--Navy_900);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+.container__main-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--Purple_500);
+
+}
+.container__main-button:hover{
+    color: white;
+}
+.container__reports{
+    display: grid;
+    grid-template-areas:
+    "work"
+    "play"
+    "study"
+    "exercise"
+    "social"
+    "selfCare";
+    gap: 20px;
+}
+.container__report{
+    display: flex;
+    flex-direction: column;
+    border-radius:20px 20px 40px 40px;
+    transition: .4s;
+}
+.container__report:hover{
+    transform: scale(1.05);
+}
+.container__report-img{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 20px;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+}
+.container__report-data{
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding:  20px 25px;
+    background-color: var(--Navy_900);
+    border-radius: 20px;
+}
+
+.report-data-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.report-data-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.points{
+    height: 5px;
+}
+.periodical{
+    font-size: 1rem;
+    font-weight:400;
+    color: var(--Purple_500);
+}
+h3{
+    font-size: 20px;
+    font-weight: 500;
+}
+.report-data-hours{
+    font-weight: 200;
+    font-size: 2rem;
+}
+
+
+.work{
+    background-color: var(--Orange_300);
+    grid-area: work;
+}
+.play{
+    background-color: var(--Blue_300);
+    grid-area: play;
+}
+.study{
+    background-color: var(--Pink_400);
+    grid-area: study;
+}
+.exercise{
+    background-color: var(--Green_400);
+    grid-area: exercise;
+}
+.social{
+    background-color: var(--Purple_500);
+    grid-area: social;
+}
+.selfCare{
+    background-color: var(--Yellow_300);
+    grid: selCare;
+}
+.show{
+    color: white;
+}
+@media (min-width:800px) {
+    .container__reports{
+       grid-template-areas:
+       "work play"
+       "study exercise"
+       "social selfCare";
+    }
+    
+}
+@media (min-width:1200px) {
+    body{
+        height: 100vh;
+    }
+    .container{
+       height: 500px;
+       grid-template-areas: 
+       "main report";
+       grid-template-columns: 250px 1fr
+    ;
+    }
+    .container__main-person{
+        flex-direction: column;
+        height: 65%;
+        
+    }
+    .container__main-tracking{
+        flex-direction: column;
+        align-items: flex-start;
+        height: 35%;
+        justify-content: space-between;
+    }
+    .container__reports{
+       grid-template-areas:
+       "work play study"
+       "exercise social selfCare";
+    }
+    .container__report-data{
+       flex-direction: column;
+       justify-content: space-around;
+     }
+    .report-data-head{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+    }
+    .report-data-text{
+       flex-direction: column;
+       align-items: flex-start;
+       gap :10px;
+    }
+    .report-data-hours{
+        font-size: 3rem;
+    }
+    .name{
+        font-size: 2.5rem;
+    }
+    
+
+}
