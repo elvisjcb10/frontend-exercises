@@ -266,7 +266,7 @@ function fillCart(){
                         div.querySelector('.button-dessert').classList.remove('selected__button');
                         div.querySelector('img').classList.remove('selected');
                         document.querySelector('.numberList').textContent=globalQuantity()  ;
-
+                        document.querySelector('.container__cart-globalprice').textContent=globalPrice().toFixed(2);
                     }
                 });
             })    
