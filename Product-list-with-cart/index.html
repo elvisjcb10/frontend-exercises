@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product list with cart</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+    <div class="container__title">
+      <h2 class="container__title-text">Desserts</h2>
+    </div>
+    <div class="container__desserts">
+      <template class="container__dessert">
+        <div class="tmre" data-id="">
+          <div class="container__dessert-img ">
+            <picture>
+              <source class="picture" media="(min-width: 970px)" srcset="assets/images/image-waffle-desktop.jpg">
+              <img class="img-dessert" src="assets/images/image-waffle-mobile.jpg" alt="Dessert">
+            </picture>
+            <div class="button-dessert2 hiden">
+              <button class="less"><img  src="assets/images/icon-decrement-quantity.svg" alt=""></button>
+              <span class="add_cart">1</span> 
+              <button class="more"><img  src="assets/images/icon-increment-quantity.svg" alt=""></button>
+            </div>
+            <button class="button-dessert">  <img class="car" src="assets/images/icon-add-to-cart.svg" alt="">  <span class="add_cart">Add to Cart</span> </button>
+
+          </div>
+          <div class="container__dessert-text">
+            <h3 class="container__dessert-name">name</h3>
+            <h3 class="container__dessert-description">description</h3>
+            <h3 class="container__dessert-price">price</h3>
+          </div>
+        </div>
+      </template>
+    </div>
+    <div class="container__cart">
+      <h3 class="count-cart" >Your cart (<span class="numberList">0</span>)</h3>
+      <div class="container__cart-empty ">
+        <div class="container__cart-empty">
+          <img class="empty" src="assets/images/illustration-empty-cart.svg" alt="">
+          <p>Your added items will appear here</p>
+        </div>
+      </div>
+        <div class="container__cart-selected">
+          <template class="container__cart-template">
+            <section class="container__cart-item">
+              <div class="container__cart-item-description">
+                <h3 class="container__cart-item-description-name">name</h3>
+                <p class="order-text" ><span class="container__cart-count">1x</span> <span class="container__cart-price">@ $5.50</span> <span class="container__cart-totalprice"> $28.00</span>  </p>
+              </div>
+              <button class="container__cart-item-delete">
+                <img src="assets/images/icon-remove-item.svg" alt="remove">
+              </button>
+            </section>
+          </template>
+        </div>
+        
+        <div class="container__cart-order hiden">
+          <div class="container__cart-total">
+            <p>Order Total</p>
+            <h2>$<span class="container__cart-globalprice" >price</span></h2>
+          </div>
+          <div class="container__cart-name">
+            <img src="assets/images/icon-carbon-neutral.svg" alt="">
+            <p>This is <b>carbon-neutral</b> delivery</p>
+          </div>
+          <button class="container__cart-button">Confirm Order</button>
+        </div>
+    </div>
+  </main>
+  <div class="modal-overlay" id="modalOverlay">
+    <dialog class="modal">
+      <div class="moda_div">
+  
+        <img class="check" src="assets/images/icon-order-confirmed.svg" alt="">
+        <div class="modal__text">
+          <h2 class="modalt__text-title">Order Confirmed</h2>
+          <p>we hope you enjoy your food! </p>
+        </div>
+        <div class="modal__oder_total">
+          <div class="modal__cart-selected">
+              <template class="modal__cart-template">
+                <section class="modal-item">
+                  <div class="modal-item-img">
+                      <img class="thumbnail">
+                  </div>
+                  <div class="modal-item-description">
+                      <h3 class="modal-item-description-name">name</h3>
+                      <p class="modal__inf-text" ><span class="modal-count">1x</span>  <span class="modal-price">@$5.50</span> </p>
+                  </div>
+                  <div class="modal-item-price">
+                    <span class="modal-totalprice"> $28.00</span> 
+                  </div>
+                </section>
+              </template>
+          </div>
+          <div class="moda__globalprice">
+            <p>Order Total</p>
+            <h2>$<span class="priceglobal">pirce</span></h2>
+          </div>
+        </div>
+        <button class="new_order">Start New Order</button>
+      </div>
+  
+    </dialog>
+  </div>
+</body>
+<script src="main.js"></script>
+</html>
