@@ -1,0 +1,42 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    color: var(--Grey_500);
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.cinput{
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background-color: var(--Grey_50);
+    width: 100px ;
+    height: 50px ;
+}
+.cinput::placeholder{
+    letter-spacing: 2px;
+    color: var(--Grey_500);
+}
+/* Quitar flechitas en Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Quitar flechitas en Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Opción estándar */
+input[type=number] {
+  appearance: none;
+}

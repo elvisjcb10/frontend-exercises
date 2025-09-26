@@ -1,0 +1,40 @@
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color:var(--Grey_50);
+    justify-content: space-between;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+/* Quitar flechitas en Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Quitar flechitas en Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Opción estándar */
+input[type=number] {
+  appearance: none;
+}
+input{
+    background-color: transparent;
+    width: 100%;
+    text-align: right;
+    border: none;
+    padding: 10px;
+    outline: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--Green_900);
+
+}
+input::placeholder{
+    color: var(--Grey_400);
+}

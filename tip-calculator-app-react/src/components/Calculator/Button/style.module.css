@@ -1,0 +1,22 @@
+.button,.buttonclikeado{
+    background-color: var(--Green_900);
+    color: var(--White);
+    border: none;
+    padding: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: inherit;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.buttonclikeado{
+    background-color: var(--Green_400);
+    color: black;
+}

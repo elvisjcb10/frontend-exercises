@@ -1,0 +1,31 @@
+
+.container{
+    width: 60%;
+    min-width: 375px;
+    height: 450px;
+    background-color: var(--White);
+    display: grid;
+    grid-template-areas: 
+    "left rigth";
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+    padding: 40px;
+    color: var(--Gray_500);
+    border-radius: 20px;
+}
+.calculator{
+    grid-area: left;
+}
+.result{
+    grid-area:rigth;
+}
+
+@media (max-width: 940px) {
+    .container {
+        grid-template-areas: 
+          "left"
+          "right";
+        grid-template-columns: 1fr;  /* importante para que se apile */
+        height: auto;                /* que crezca según contenido */
+    }
+}
