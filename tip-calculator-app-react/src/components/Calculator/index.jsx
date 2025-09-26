@@ -2,7 +2,7 @@ import Button from "./Button";
 import Input from "./Input";
 import style from "./style.module.css"
 import { useState } from "react";
-import personIcon from '../../images/icon-Person.svg';
+import personIcon from '../../images/icon-person.svg';
 import billIcon from '../../images/icon-dollar.svg';
 const Calculator=({onPerson,onTotal,onSmash,onCustom,custom ,person,bill,selectedTip,setSelectedTip,handleTipClick})=>{
     let tips=[5,10,15,25,50];
