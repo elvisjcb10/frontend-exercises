@@ -2,6 +2,8 @@ import Button from "./Button";
 import Input from "./Input";
 import style from "./style.module.css"
 import { useState } from "react";
+import personIcon from '../../images/icon-Person.svg';
+import billIcon from '../../images/icon-dollar.svg';
 const Calculator=({onPerson,onTotal,onSmash,onCustom,custom ,person,bill,selectedTip,setSelectedTip,handleTipClick})=>{
     let tips=[5,10,15,25,50];
     
@@ -18,7 +20,7 @@ const Calculator=({onPerson,onTotal,onSmash,onCustom,custom ,person,bill,selecte
                 <Input
                     value={bill}
                     onInput={onTotal}
-                    urlIcon={'../../images/icon-dollar.svg'}
+                    urlIcon={billIcon}
                     children={0}
                 ></Input>
             </div>
@@ -34,7 +36,7 @@ const Calculator=({onPerson,onTotal,onSmash,onCustom,custom ,person,bill,selecte
                 <Input
                     value={person}
                     onInput={onPerson}
-                    urlIcon={'../../images/icon-Person.svg'}
+                    urlIcon={personIcon}
                     children={0}
                 ></Input>
             </div>
