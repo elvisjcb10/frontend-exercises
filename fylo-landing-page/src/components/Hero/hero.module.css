@@ -1,0 +1,28 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-image: url('../../../images/bg-curvy-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    padding: 80px 0 220px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 34%;
+    text-align: center;
+    
+}
+button{
+    cursor: pointer;
+    color: inherit;
+    padding: 10px 60px;
+    border-radius: 10px;
+    background-image: linear-gradient(to left, var(--cyan-500) 0%, var(--teal-200) 150%);
+    border: none;
+}

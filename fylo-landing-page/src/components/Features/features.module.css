@@ -1,0 +1,13 @@
+.container{
+    background-color: var(--navy-900);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerFeatures{
+    display: flex;
+    width: 60%;
+    gap: 50px ;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,46 @@
+:root {
+  /* === Primary === */
+  --navy-850: hsl(217, 28%, 15%); /* intro and email sign up background */
+  --navy-900: hsl(218, 28%, 13%); /* main background */
+  --navy-950: hsl(216, 53%, 9%);  /* footer background */
+  --navy-800: hsl(219, 30%, 18%); /* testimonials background */
+
+  /* === Accent === */
+  --teal-200: hsl(176, 68%, 64%); /* call-to-action gradient */
+  --cyan-500: hsl(198, 60%, 50%); /* call-to-action gradient */
+  --red-500: hsl(0, 100%, 63%);   /* error */
+
+  /* === Neutral === */
+  --white: hsl(0, 0%, 100%);
+}
+/* Parte del “track” (fondo del scroll) */
+/* ancho del scroll */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* fondo del track */
+::-webkit-scrollbar-track {
+  background: var(--navy-900);
+}
+
+/* parte que se mueve */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--cyan-500), var(--teal-200));
+  border-radius: 8px;
+}
+
+/* hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--teal-200);
+}
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Open Sans',cursive;
+  background-color: var(--navy-850);
+  color: var(--white);
+}

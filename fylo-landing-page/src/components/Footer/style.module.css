@@ -1,0 +1,94 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+    background-color: var(--navy-900);
+    position: relative;
+}
+.getAccess{
+    position: absolute;
+    top: 0;
+    width: 80%;
+    max-width: 800px;
+    background-color: var(--navy-850);
+    text-align: center;
+    padding: 50px 50px;
+    display: flex;
+    flex-direction: column;
+    gap :30px;
+    border-radius: 10px;
+}
+.buttonAccess{
+    padding: 15px 30px; 
+    border-radius: 20px;
+    
+}
+.phrase{
+    padding:  0 20px;
+}
+.footerinfo{
+    background-color: var(--navy-950);
+    height: 500px;
+    width: 100%;
+    padding: 220px 50px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footerText{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.textInfo{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.p{
+    width: 350px;
+    display: flex; flex-direction: row;
+    gap :20px
+}
+.socialMedia{
+    
+    display: flex;
+    gap: 20px;
+}
+.media{
+    display: flex;
+    gap: 30px;
+}
+.form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.inputAccess{
+    width: 70%;
+    padding: 15px 40px;
+    border-radius: 20px;
+    border: none;
+    outline: nonde;
+}
+input:focus {
+  outline: none;
+}
+.input{
+    width: 100%;
+    
+}
+span{
+    color: var(--red-500);
+    font-size: .7rem;
+    font-family: inherit;
+    justify-self: flex-start;   
+    padding: 0px 40px ;
+    font-weight: 600;
+}
+.killme{
+    display: grid;
+    gap: 3px;
+}

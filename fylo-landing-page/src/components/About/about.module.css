@@ -1,0 +1,52 @@
+.container{
+    background-color: var(--navy-900);
+    padding: 100px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    z-index: 1;
+}
+.main{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+}
+.title{
+    width: 300px;
+}
+h2{
+    font-size: 2rem;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.link{
+    display: flex;
+    gap: 10px;
+    padding: 5px 0;
+    justify-items: center;
+    width: fit-content;
+    text-align: start;
+    color: var(--teal-200);
+    border-bottom: 3px solid var(--teal-200) ;
+}
+.containerComents{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    z-index: 4;
+}
+.containerComentarios{
+    position: relative;
+    padding: 20px;
+}
+.quotes{
+    z-index: 2;
+    position: absolute;
+    top:0;
+}
