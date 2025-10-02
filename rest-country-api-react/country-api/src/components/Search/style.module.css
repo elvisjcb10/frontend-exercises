@@ -1,0 +1,31 @@
+
+.container{
+    width: 40%;
+    padding: 10px 20px;
+    background-color: var(--Blue_900);
+    border-radius: 5px;
+    display: flex;
+    gap :10px;
+    justify-content: start;
+    align-items: center;
+    
+    
+}
+.icon{
+    color: var(--Grey_400);
+}
+.input{
+    width: 100%;
+    border: none;
+    padding: 10px 10px;
+    background-color: transparent;
+    outline: none;
+    color: var(--White);
+    font-size: 1rem;
+}
+
+.input::placeholder{
+    font-size: .9rem;
+    color: var(--Grey_400);
+    
+}
