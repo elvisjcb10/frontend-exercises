@@ -1,18 +1,21 @@
 import style from "./style.module.css"
-const Country=({image,name,population,region,capital})=>{
+import { Link } from "react-router-dom";
+const Country=({image,name,population,region,capital,code})=>{
     
     return(
-        <div className={style.container}>
-          <img className={style.img} src={image} alt="imagen" />
-          <div className={style.info}>
-            <h2 className={style.name}>{name}</h2>
-            <div>
-                <p>Poblacion: {population.toLocaleString()}</p>
-                <p>Region: {region}</p>
-                <p>Capital: {capital}</p>
+        <Link to={`/detail/${code}`}>
+          <div className={style.container}>
+            <img className={style.img} src={image} alt="imagen" />
+            <div className={style.info}>
+              <h2 className={style.name}>{name}</h2>
+              <div>
+                  <p>Poblacion: <span>{population.toLocaleString()}</span></p>
+                  <p>Region: <span>{region}</span></p>
+                  <p>Capital: <span>{capital}</span></p>
+              </div>
             </div>
           </div>
-        </div>
+        </Link>
     );
 }
 export default Country

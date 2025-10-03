@@ -1,7 +1,10 @@
 .container{
-    background-color: var(--Blue_900);
+    background-color: var(--mode-Element);
     border-radius: 10px;
     width: 300px;
+    cursor: pointer;
+    padding: 0 0 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,.1);
 }
 .img{
     width: 100%;
@@ -16,5 +19,11 @@
     color: var(--White);
 }
 .name {
-  color: red;    /* <-- IMPORTANTE: permite saltos de línea */
+  color: var(--White);    
+}
+p{
+    font-weight: 600;
+}
+span{
+    font-weight: 300;
 }

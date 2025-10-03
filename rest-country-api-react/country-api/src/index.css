@@ -1,17 +1,26 @@
-:root{
-  --Blue_900 : hsl(209, 23%, 22%) ;/*Dark Mode Elements*/
-  --Blue_950 : hsl(207, 26%, 17%); /*(Dark Mode Background)*/
-  --Grey_950 : hsl(200, 15%, 8%) ;
-  --Grey_400 : hsl(0, 0%, 50%);
-  --Grey_50 : hsl(0, 0%, 99%);
-  --White : hsl(0, 100%, 100%);
+:root {
+  --mode-Element: hsl(0, 0%, 100%);
+  --mode-Background: hsl(0, 0%, 98%);
+  --White: hsl(200, 15%, 8%);
+}
+
+/* Tema oscuro */
+body.dark {
+  --mode-Element: hsl(209, 23%, 22%);
+  --mode-Background: hsl(207, 26%, 17%);
+  --White: hsl(0, 0%, 100%);
 }
 *{
   margin: 0;
   box-sizing: border-box;
 }
 body{
-  background-color:var(--Blue_950) ;
+  background-color:var(--mode-Background) ;
+  color: var(--White);
   font-family: 'Nunito Sans',cursive;
 
+}
+a{
+  text-decoration: none;
+  color: (var(--White));
 }

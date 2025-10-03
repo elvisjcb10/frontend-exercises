@@ -1,8 +1,4 @@
-:root{
-    --Blue_950 : hsl(207, 26%, 17%); /*(Dark Mode Background)*/
-    --Blue_900 : hsl(209, 23%, 22%) ;/*Dark Mode Elements*/
 
-}
 *{
     margin: 0;
     box-sizing: border-box;
@@ -10,15 +6,32 @@
 .container{
     display: flex;
     width: 100%;
-    background-color: var(--Blue_900);
-    color: white;
+    background-color: var(--mode-Element);
+    color: var(--White);
     padding: 20px 60px;
     display: flex;
     justify-content: space-between;
+    box-shadow: 2px 2px 10px rgba(0,0,0,.1);
     
 }
 label{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.mode{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+@media (max-width:768px) {
+    .container{
+        padding: 20px 20px;
+    }
+    .title{
+      font-size: 1rem;
+    }
+    label{
+        font-size: .9rem;
+    }
 }

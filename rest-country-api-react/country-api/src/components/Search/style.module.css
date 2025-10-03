@@ -2,17 +2,18 @@
 .container{
     width: 40%;
     padding: 10px 20px;
-    background-color: var(--Blue_900);
+    background-color: var(--mode-Element);
     border-radius: 5px;
     display: flex;
     gap :10px;
     justify-content: start;
     align-items: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,.1);
     
     
 }
 .icon{
-    color: var(--Grey_400);
+    color: var(--White);
 }
 .input{
     width: 100%;
@@ -26,6 +27,11 @@
 
 .input::placeholder{
     font-size: .9rem;
-    color: var(--Grey_400);
+    color: var(--White);
     
+}
+@media (max-width:630px) {
+    .container{
+        width: 100%;
+    }
 }

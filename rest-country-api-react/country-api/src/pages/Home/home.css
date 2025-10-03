@@ -1,0 +1,15 @@
+.search-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 60px;
+  align-items: center;
+
+}
+@media (max-width:630px) {
+    .search-container{
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 30px;
+    }
+}

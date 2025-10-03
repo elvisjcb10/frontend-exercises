@@ -1,7 +1,7 @@
 import Country from "./components/country";
-import useCountryData from "../../../hooks/useCountryData";
+import useCountryData from "../../hooks/useCountryData";
 import style from "./style.module.css"
-const Countries=({searchTerm})=>{
+const Countries=({searchTerm,region})=>{
     const {data,isLoading,error}=useCountryData();
     const renderCountries=()=>{
         let counFiltered=data;
@@ -9,6 +9,9 @@ const Countries=({searchTerm})=>{
         if(searchTerm.length>0){
             counFiltered=counFiltered.filter((item)=>item.name.official.toLowerCase().includes(searchTerm));
 
+        }
+        if(region!==null){
+            counFiltered=counFiltered.filter((item)=>item.region===region);
         }
         return counFiltered.map((itm)=>(
             <Country
@@ -18,6 +21,7 @@ const Countries=({searchTerm})=>{
                 population={itm.population}
                 region={itm.region}
                 capital={itm.capital[0]}
+                code={itm.cca3}
             />
         ));
     };

@@ -1,6 +1,6 @@
 import style from './style.module.css'
 import Select from 'react-select'
-const Filter=()=>{
+const Filter=({handleChangeRegion})=>{
     const options = [
         { value: "Africa", label: "Africa" },
         { value: "Americas", label: "America" },
@@ -17,19 +17,19 @@ const Filter=()=>{
         borderRadius: "10px",
         boxShadow: "0 2px 6px rgba(0,0,0,0.3)",
         padding: "4px 8px",
-        color: "#fff",
+        color: "var(--White)",
     }),
     singleValue: (base) => ({
         ...base,
-        color: "#fff",
+        color: "var(--White)",
     }),
     placeholder: (base) => ({
         ...base,
-        color: "#ccc",
+        color: "var(--White)",
     }),
     menu: (base) => ({
         ...base,
-        backgroundColor: "var(--Blue_900)",
+        backgroundColor: "var(--mode-Element)",
         borderRadius: "10px",
         marginTop: "8px",
         boxShadow: "0 4px 10px rgba(0, 0, 0, 0.11)",
@@ -38,10 +38,10 @@ const Filter=()=>{
     option: (base, state) => ({
         ...base,
         backgroundColor:state.isFocused? "var(--Grey_400)":state.isSelected
-      ? "var(--Blue_900)" // opción seleccionada
-      : "var(--Blue_900)",
+      ? "var(--mode-Element)" // opción seleccionada
+      : "var(--mode-Element)", // opción no seleccionada
         
-        color: "#fff",
+        color: "var(--White)",
         cursor: "pointer",
         padding: "10px 15px",
     }),
@@ -53,7 +53,7 @@ const Filter=()=>{
                 placeholder="Filter by region"
                 className={style.custom }
                 styles={customStyles}
-
+                onChange={(e)=>handleChangeRegion(e.value)}
             ></Select>
         </div>
     );
