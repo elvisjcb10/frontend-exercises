@@ -1,4 +1,4 @@
-import Country from "./components/Country";
+import Country from "./components/Country/Country";
 import useCountryData from "../../hooks/useCountryData";
 import style from "./style.module.css"
 const Countries=({searchTerm,region})=>{
