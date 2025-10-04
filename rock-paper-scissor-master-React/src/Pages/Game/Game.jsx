@@ -41,7 +41,7 @@ const Game = ({ userChoice,setUserChoice,setScore }) => {
       setWinner(result);
       if(result==="user"){
         console.log("gano el usuario");
-        setScore(prevScore => prevScore + 0.5);
+        setScore(prevScore => prevScore + 1);
       }
     }, 2000);
     
