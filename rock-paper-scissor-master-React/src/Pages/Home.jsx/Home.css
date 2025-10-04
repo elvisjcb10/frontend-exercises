@@ -1,0 +1,8 @@
+.score-wrapper{
+    width: 100%; /* O un ancho específico */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    gap: 100px;
+}

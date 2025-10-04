@@ -1,0 +1,30 @@
+.score-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 10px;
+  width: 90%;
+  height: auto;
+  border: 4px solid var(--navy-900);
+}
+.score-box{
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 20px;
+}   
+.score-title{
+    font-size: .6rem;
+    font-weight: 600px;
+    color: var(--blue-700);
+    letter-spacing: 2px;
+}
+.score-value{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--navy-900);
+}
+.score-logo{
+    height: 60px;
+}

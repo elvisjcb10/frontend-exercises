@@ -1,0 +1,28 @@
+.game {
+    display: grid;
+    grid-template-areas: 
+        "user computer"
+        "result result";
+    justify-self: center;
+    text-align: center;
+    width: 100%  ;
+}
+.game-result{
+    color: white;
+    font-size: 2rem;
+    margin: 20px 0;
+    grid-area: result;
+}
+.game-user{
+    grid-area: user;
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+}
+.game-computer{
+
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+    grid-area: computer;
+}

@@ -1,0 +1,198 @@
+.element {
+  position: absolute;
+  border-radius: 50%;
+  border: 10px solid white;
+  background-color: white;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  object-fit: contain;
+  justify-content: center;
+  align-items: center;
+  animation: pop-in 0.9s cubic-bezier(.2,.9,.2,1)  forwards;
+}
+.element:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow:0 0px 10px rgba(128, 117, 117, 0.133),   
+      0 0 0 20px rgba(128, 117, 117, 0.104),
+      0 0 0 40px rgba(128, 117, 117, 0.081),
+      0 0 0 60px rgba(128, 117, 117, 0.051),
+      0 0 0 80px rgba(128, 117, 117, 0.01);
+}
+@keyframes pop-in {
+  0%   { transform: scale(0.4); opacity: 0; }
+  60%  { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+img{
+    border: none;
+    text-decoration: none;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+.img{
+    width: 50%;
+    height: 50%;
+}
+
+.scissor{
+    top: 0;
+    left:34%;
+    border: 10px solid var(--gold-500);
+    box-shadow: 0px 5px 0px var(--gold-600);
+}
+.spock{
+    bottom: 44%;
+    left: 0;
+    border: 10px solid var(--light-blue-400);
+    box-shadow: 0px 5px 0px var(--light-blue-500);
+}
+.paper{
+    bottom: 44%;
+    right: 0;
+    border: 10px solid var(--blue-500);
+    box-shadow: 0px 5px 0px var(--blue-700);
+}
+.lizard{
+    bottom: 4%;
+    left: 12%;
+    border: 10px solid var(--purple-600);
+    box-shadow: 0px 5px 0px var(--purple-700);
+}
+.rock{
+    bottom: 4%;
+    right: 12%;
+    border: 10px solid var(--red-600);
+    box-shadow: 0px 5px 0px var(--red-800);
+}
+
+
+
+.choose {
+    border-radius: 50%;
+    border: 13px solid white;
+    background-color: white;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    object-fit: contain;
+    justify-content: center;
+    align-items: center;
+    animation: pop-in 0.9s cubic-bezier(.2,.9,.2,1) ;
+}
+.empty{
+    background-color: var(--blue-700);
+}
+
+
+.choose-scissor{
+    border: 13px solid var(--gold-500);
+    box-shadow: 0px 7px 0px var(--gold-600);
+    width: 130px !important;
+    height: 130px !important;
+
+}
+
+.choose-rock{
+    border: 13px solid var(--red-600);
+    box-shadow: 0px 7px 0px var(--red-800);
+    width: 130px !important;
+    height: 130px !important;
+
+}
+
+.choose-paper{
+    border: 13px solid var(--blue-500);
+    box-shadow: 0px 7px 0px var(--blue-700);
+    width: 130px !important;
+    height: 130px !important;
+}
+
+.choose-lizard{
+    border: 13px solid var(--purple-600);
+    box-shadow: 0px 7px 0px var(--purple-700);
+    width: 130px !important;
+    height: 130px !important;
+}
+
+.choose-spock{
+    border: 13px solid var(--light-blue-400);
+    box-shadow: 0px 7px 0px var(--light-blue-500);
+    width: 130px !important;
+    height: 130px !important;
+
+}
+
+.empty {
+    border-radius: 50%;
+    border: 13px solid white;
+    background-color: white;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    object-fit: contain;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    animation: pop-in 0.9s cubic-bezier(.2,.9,.2,1) 1 forwards;
+    background-color:hsl(237, 48%, 15%);
+    border: transparent ;
+}
+
+
+.winner::after{
+    position: relative;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 0 20px rgba(128, 117, 117, 0.1),
+                0 0 0 40px rgba(128, 117, 117, 0.1),
+                0 0 0 60px rgba(128, 117, 117, 0.1);
+    animation: pulse 1s infinite;
+    background-color: red;
+}
+@media (min-width: 750px) {
+    .element{
+        width: 120px;
+        height: 120px;
+    }
+    .scissor{
+        top: 0;
+        left:36%;
+        border: 15px solid var(--gold-500);
+    }
+    .spock{
+        border: 15px solid var(--light-blue-400);
+    }
+    .paper{
+        border: 15px solid var(--blue-500);
+    }
+    .lizard{
+        border: 15px solid var(--purple-600);
+    }
+    .rock{
+        border: 15px solid var(--red-600);
+    }
+
+}
+@media (min-width: 1000px) {
+    .element{
+        width: 150px;
+        height: 150px;
+    }
+    .scissor{
+        top: 0;
+        left:35%;
+    }
+}

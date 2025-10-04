@@ -1,0 +1,32 @@
+:root{
+  --gold-500: hsl(39, 89%, 49%);
+  --gold-600: hsl(28, 76%, 44%);
+  --blue-500: hsl(230, 89%, 62%);
+  --blue-700: hsl(229, 64%, 46%);
+  --red-600: hsl(349, 71%, 52%);
+  --red-800: hsl(347, 75%, 35%);
+  --purple-600: hsl(261, 73%, 60%);
+  --purple-700: hsl(261, 51%, 44%);
+  --light-blue-400: hsl(189, 59%, 53%);
+  --light-blue-500: hsl(194, 58%, 42%);
+
+ /* Neutral */
+  --navy-900: hsl(229, 25%, 31%);
+  --gray-600: hsl(246, 11%, 37%);
+  --blue-700: hsl(229, 64%, 46%);
+
+/* Background */
+
+  --radial-gradient: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 48%, 15%));
+}
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background-image: var(--radial-gradient);
+  height: 100vh;
+  
+}
