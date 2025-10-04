@@ -8,19 +8,21 @@ import { useParams } from "react-router-dom";
 import './Game.css'
 import { useEffect,useState } from "react";
 import Result from "../../components/Result/Result";
-const Game = ({ userChoice,setUserChoice }) => {
+const Game = ({ userChoice,setUserChoice,setScore }) => {
   const [computerElement,setComputerElement] = useState(null);
   const [winner,setWinner] = useState(null);
   const elementData = [
-      { img: scissor, color: 'scissor' },
-      { img: rock, color: 'rock' },
-      { img: paper, color: 'paper' },
-      { img: lizard, color: 'lizard' },
-      { img: spock, color: 'spock' },
+      { img: scissor, tipo: 'scissor' },
+      { img: rock, tipo: 'rock' },
+      { img: paper, tipo: 'paper' },
+      { img: lizard, tipo: 'lizard' },
+      { img: spock, tipo: 'spock' },
     ];
   const determineWinner = (user, computer) => {
-    if (user.color === computer.color) {
-      return "tie"; // It's a tie
+    console.log("user",user);
+    console.log("computer",computer);
+    if (user.tipo === computer.tipo) {
+      return "tie"; 
     }
     const winningCombinations = {
       rock: ['scissor', 'lizard'],
@@ -29,15 +31,19 @@ const Game = ({ userChoice,setUserChoice }) => {
       lizard: ['spock', 'paper'],
       spock: ['scissor', 'rock'],
     };
-    return winningCombinations[user.color].includes(computer.color)?"user":"computer";
+    return winningCombinations[user.tipo].includes(computer.tipo)?"user":"computer";
   };
   const random=elementData[Math.floor(Math.random() * elementData.length)]
   useEffect(() => {
     setTimeout(() => {
+      const result=determineWinner(userChoice, random);
       setComputerElement(random);
-      setWinner(determineWinner(userChoice, random));
+      setWinner(result);
+      if(result==="user"){
+        console.log("gano el usuario");
+        setScore(prevScore => prevScore + 0.5);
+      }
     }, 2000);
-    console.log(random);
     
   }, []);
   
@@ -46,22 +52,22 @@ const Game = ({ userChoice,setUserChoice }) => {
   }
   return (
     <div className="game">
-        <div className="game-user">
-            <Element img={userChoice.url} color={`choose choose-${userChoice.color} ${winner==="user" ? "winner" : ""}`} />
-            <p>YOU PICKED</p>
+        <div className={`game-user`}>
+            <Element img={userChoice.url} color={`choose choose-${userChoice.tipo} ${winner==="user" ? "winner" : ""}`} />
+            <p className="game-use-text">YOU PICKED</p>
         </div>
-        <div className="game-computer">
-            {computerElement?<Element img={computerElement.img} color={`choose choose-${computerElement.color}  ${winner==="computer" ? "winner" : ""}`} />:<Element img={""} color={"empty"} />}
-            <p>THE HOUSE PICKED</p>
+        <div className={`game-computer`}>
+            {computerElement?<Element img={computerElement.img} color={`choose reveal choose-${computerElement.tipo} ${winner==="computer" ? "winner" : ""}`} />:<Element img={""} color={"empty"} />}
+            <p className="game-computer-text">THE HOUSE PICKED</p>
         </div>
-        <div className="game-result">
-            {computerElement && (
-              <Result 
-                  result={winner === "tie" ? "IT'S A TIE" : winner === "user" ? "YOU WIN" : "YOU LOSE"} 
-                  handlePlayAgain={handlePlayAgain} 
+        {computerElement && (
+            <div className="game-result">
+                <Result 
+                    result={winner === "tie" ? "IT'S A TIE" : winner === "user" ? "YOU WIN" : "YOU LOSE"} 
+                    handlePlayAgain={handlePlayAgain} 
                 />            
-            )}
-        </div>
+            </div>
+        )}
     </div>
   );
 }

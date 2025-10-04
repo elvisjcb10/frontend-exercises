@@ -1,6 +1,6 @@
 import logobonus from '../../../images/logo-bonus.svg'
 import './Score.css'
-const Score=()=>{
+const Score=({score})=>{
     return(
         <main className="score-container">
             <div>
@@ -8,7 +8,7 @@ const Score=()=>{
             </div>
             <div className="score-box">
                 <h2 className="score-title">SCORE</h2>
-                <span className="score-value">0</span>
+                <span className="score-value">{score}</span>
             </div>
         </main>
     );

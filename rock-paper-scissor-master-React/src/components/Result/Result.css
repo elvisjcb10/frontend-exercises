@@ -1,4 +1,23 @@
 .result{
     color: white;
+
+}
+.play-again {
+    background-color: white;
+    color: var(--navy-900);
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 5px;
+    padding: 14px 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition:all background-color 0.3s ease;
     
+}
+.play-again:hover{
+    transform: scale(1.1);
+        transition: transform 0.3s ease; /* añade transición para que sea suave */
+
 }

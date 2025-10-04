@@ -9,20 +9,20 @@ import './Hero.css'
 import { Link } from 'react-router-dom';
 const Hero = ({ onChoose }) => {
   const elementData = [
-    { img: scissor, color: 'scissor' },
-    { img: rock, color: 'rock' },
-    { img: paper, color: 'paper' },
-    { img: lizard, color: 'lizard' },
-    { img: spock, color: 'spock' },
+    { img: scissor, tipo: 'scissor' },
+    { img: rock, tipo: 'rock' },
+    { img: paper, tipo: 'paper' },
+    { img: lizard, tipo: 'lizard' },
+    { img: spock, tipo: 'spock' },
   ];
-  const handleChoose = (color, img) => {
-    onChoose({ color, url: img });
+  const handleChoose = (tipo, img) => {
+    onChoose({ tipo, url: img });
   }
   return (
     <div  className="hero">
       <img className='bg-pentagon' src={Pentagono} alt="Fondo pentágono" />
-        {elementData.map(({ img, color }) => (
-          <Element key={color} onClick={handleChoose} img={img} color={`element ${color}`} />
+        {elementData.map(({ img, tipo }) => (
+          <Element key={tipo} onClick={() => handleChoose(tipo, img)} img={img} color={`element ${tipo}`} />
         ))}
     </div>
   );
