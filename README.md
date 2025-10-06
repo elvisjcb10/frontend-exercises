@@ -1,67 +1,67 @@
 # Frontend Exercises
 
-Este repositorio contiene soluciones a varios ejercicios de [Frontend Mentor](https://www.frontendmentor.io/profile/elvisjcb10), implementados usando HTML, CSS, JavaScript y React + Vite.
+This repository contains solutions to various exercises from [Frontend Mentor](https://www.frontendmentor.io/profile/elvisjcb10), implemented using HTML, CSS, JavaScript, and React + Vite.
 
 ---
 
-## Tecnologías
+## Technologies
 
 ### Frontend
 - HTML5 | CSS3 | JavaScript (ES6+)
 - React + Vite
-- Postman (para pruebas de API)
+- Postman (for API testing)
 
 ---
 
-## Proyectos Destacados
+## Featured Projects
 
 ### 1. Tip Calculator App
-Calculadora de propinas interactiva desarrollada con React.  
-🔗 [Ver en Vercel](https://tipcalculator-lake.vercel.app/)  
+Interactive tip calculator developed with React.  
+🔗 [View on Vercel](https://tipcalculator-lake.vercel.app/)  
 
-![Tip Calculator](assets/tip-calculator.jpg)  <!-- Asegúrate de subir la imagen a la carpeta "imagenes" -->
+![Tip Calculator](assets/tip-calculator.jpg)
 
 ---
 
 ### 2. REST Countries App
-Consumo de API para mostrar países y sus detalles usando [REST Countries API](https://restcountries.com/). Incluye cambio de tema (modo claro/oscuro).  
-🔗 [Ver en Vercel](https://restcountry-smoky.vercel.app/)  
+API consumption project to display countries and their details using the [REST Countries API](https://restcountries.com/). Includes theme switching (light/dark mode).  
+🔗 [View on Vercel](https://restcountry-smoky.vercel.app/)  
 
-![REST Countries](assets/rest-country-home.jpg)
+![REST Countries](assets/rest-country-home.jpg)  
 ![REST Countries](assets/rest-country-detail.jpg)
 
 ---
 
 ### 3. Rock, Paper, Scissors, Lizard, Spock
-Juego clásico extendido de Piedra, Papel, Tijera, Lagarto, Spock implementado con React.  
-🔗 [Ver en Vercel](https://rockscissorpaperbonus.vercel.app/)  
+Classic extended Rock, Paper, Scissors game implemented with React.  
+🔗 [View on Vercel](https://rockscissorpaperbonus.vercel.app/)  
 
-![RPSLS Game](assets/rock-scissor-paper-home.jpg)
-![RPSLS Game](assets/rock-scissor-paper-rules.jpg)
+![RPSLS Game](assets/rock-scissor-paper-home.jpg)  
+![RPSLS Game](assets/rock-scissor-paper-rules.jpg)  
 ![RPSLS Game](assets/rock-scissor-paper-game.jpg)
 
 ---
 
 ### 4. Product List with Cart
-Carrito de compras clásico usando HTML, CSS y JavaScript, con modales interactivos.  
-🔗 [Ver en Vercel](https://productlist-two.vercel.app/)  
+Classic shopping cart using HTML, CSS, and JavaScript, featuring interactive modals.  
+🔗 [View on Vercel](https://productlist-two.vercel.app/)  
 
-![Product List](assets/product-card.jpg)
+![Product List](assets/product-card.jpg)  
 ![Product List](assets/product-card-modal.jpg)
 
 ---
 
 ### 5. Calculator App
-Calculadora interactiva con HTML, CSS y JavaScript, con cambios de color dinámicos.  
-🔗 [Ver en Vercel](https://productlist-two.vercel.app/)  
+Interactive calculator using HTML, CSS, and JavaScript, with dynamic color themes.  
+🔗 [View on Vercel](https://productlist-two.vercel.app/)  
 
-![Calculator](assets/calculator-theme1.jpg)
+![Calculator](assets/calculator-theme1.jpg)  
 ![Calculator](assets/calculator-theme2.jpg)
 
 ---
 
-## Cómo usar este repositorio
+## How to Use This Repository
 
-1. Clonar el repositorio:  
+1. Clone the repository:  
 ```bash
 git clone https://github.com/elvisjcb10/frontend-exercises.git
