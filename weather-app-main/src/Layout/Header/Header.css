@@ -1,0 +1,22 @@
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1400px;
+    padding: 40px 0px;
+}
+.dropdown{
+    border-radius: 10px;
+    padding: 10px 15px ;
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--background-card);
+    cursor: pointer;
+    max-width: 1400px;
+}

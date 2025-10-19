@@ -1,0 +1,39 @@
+
+:root{
+  --color:white;
+  --background-color:hsl(243, 96%, 9%);
+  --background-card:hsl(243, 27%, 20%);
+  --background-unitChecked:hsl(243, 23%, 24%);
+  --color-Units: hsl(240, 6%, 70%);
+  --background-search: hsl(243, 23%, 30%);
+  --background-button:hsl(233, 67%, 56%);
+  /* - **Neutral 900**: hsl(243, 96%, 9%)
+- **Neutral 800**: hsl(243, 27%, 20%)
+- **Neutral 700**: hsl(243, 23%, 24%)
+- **Neutral 600**: hsl(243, 23%, 30%)
+- **Neutral 300**: hsl(240, 6%, 70%)
+- **Neutral 200**: hsl(250, 6%, 84%)
+- **Neutral 0**: hsl(0, 0%, 100%)
+
+### Orange
+
+- **Orange 500**: hsl(28, 100%, 52%)
+
+### Blue
+
+- **Blue 500**: hsl(233, 67%, 56%)
+- **Blue 700**: hsl(248, 70%, 36%) */
+}
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--background-color);
+  color: var(--color);
+  font-family: 'DM Sans',cursive;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
