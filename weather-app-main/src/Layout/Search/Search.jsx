@@ -1,11 +1,31 @@
 import React from 'react'
 import './Search.css'
 import search from '../../assets/images/icon-search.svg'
-function Search({handleSubmnit,setCity,city}) {
+import {useShallow} from "zustand/react/shallow"
+import { useWeatherStore } from '../../store/useWeatherStore'
+import { useState  } from 'react'   
+import useFindCity from '../../Hooks/useFindCity'
+function Search() {
+  const [city, setCity] = useState("")
+  const {data,isloading,error}=useFindCity(city);
+  const { setLongitud, setLatitud } = useWeatherStore(
+      useShallow((state) => ({
+        setLatitud:state.setLatitud,
+        setLongitud:state.setLongitud
+      }))
+  );
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    console.log(data);
+    console.log(data.results[0].latitude);
+    setLatitud(data.results[0].latitude);
+    setLongitud(data.results[0].longitude);
+    setCity("");
+  }
   return (
     <div className='search-container'>
         <h1>How's the sky looking today?</h1>
-        <form onSubmit={handleSubmnit} className='search'>
+        <form onSubmit={handleSubmit} className='search'>
             <div className='input'>
                 <img src={search} alt="" />
                 <input value={city} onChange={(e)=>setCity(e.target.value)} type="text" placeholder='Search for a place...' />

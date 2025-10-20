@@ -8,9 +8,6 @@ import units from '../../assets/images/icon-units.svg'
 function Header() {
   const [isDropdown,setDropdown]=useState(false);
   const [closing, setClosing] = useState(false);
-  const [temp,setTemp]=useState("c");
-  const [wind,setWind]=useState("kmh");
-  const [prec,setPrec]=useState("mm");
   const toggleDropdown = () => {
     if (isDropdown) {
       setClosing(true);
@@ -31,14 +28,7 @@ function Header() {
           Units
           <img src={arrow} alt="" />
         </div>
-        {isDropdown && <Units 
-          prec={prec}
-          temp={temp}
-          wind={wind}
-          setPrec={setPrec}
-          setTemp={setTemp}
-          setWind={setWind}
-          hidden={closing ? "hidden" : ""} />}      
+        {isDropdown && <Units hidden={closing ? "hidden" : ""} />}      
       </div>
     </header>
   )

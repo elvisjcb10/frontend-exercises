@@ -1,0 +1,16 @@
+.Description-container{
+    background-color: var(--background-card);
+    width: 220px;
+    height: 120px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Description-container h3{
+    font-weight: 400;
+}
+.Description-container p{
+    font-size: 2rem;
+}

@@ -1,0 +1,6 @@
+.cardDaily{
+    width: 120px;
+    height: 200px;
+    background-color:var(--background-card);
+    border-radius: 10px;
+}

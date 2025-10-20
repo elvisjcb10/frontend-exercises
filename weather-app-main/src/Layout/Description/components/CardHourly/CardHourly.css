@@ -1,0 +1,7 @@
+.hourlycontainer{
+    background-color: var(--background-search);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 13px;
+}
