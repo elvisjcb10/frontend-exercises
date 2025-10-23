@@ -20,3 +20,11 @@
     cursor: pointer;
     max-width: 1400px;
 }
+.dropdown img{
+    width: 15px;
+    transition: transform 0.1s;
+    transform-style: center;
+}
+.rotate{
+    transform: rotate(180deg);
+}

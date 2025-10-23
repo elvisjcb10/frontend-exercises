@@ -6,12 +6,14 @@ import { useWeatherStore } from '../../store/useWeatherStore'
 import { useState  } from 'react'   
 import useFindCity from '../../Hooks/useFindCity'
 function Search() {
-  const [city, setCity] = useState("")
+  const [city, setCity2] = useState("")
   const {data,isloading,error}=useFindCity(city);
-  const { setLongitud, setLatitud } = useWeatherStore(
+  const { setLongitud, setLatitud,setCity,setCountry } = useWeatherStore(
       useShallow((state) => ({
         setLatitud:state.setLatitud,
-        setLongitud:state.setLongitud
+        setLongitud:state.setLongitud,
+        setCity:state.setCity,
+        setCountry:state.setCountry
       }))
   );
   const handleSubmit=(e)=>{
@@ -20,7 +22,9 @@ function Search() {
     console.log(data.results[0].latitude);
     setLatitud(data.results[0].latitude);
     setLongitud(data.results[0].longitude);
-    setCity("");
+    setCity(data.results[0].name);
+    setCountry(data.results[0].country);
+    setCity2("");
   }
   return (
     <div className='search-container'>
@@ -28,7 +32,7 @@ function Search() {
         <form onSubmit={handleSubmit} className='search'>
             <div className='input'>
                 <img src={search} alt="" />
-                <input value={city} onChange={(e)=>setCity(e.target.value)} type="text" placeholder='Search for a place...' />
+                <input value={city} onChange={(e)=>setCity2(e.target.value)} type="text" placeholder='Search for a place...' />
             </div>
             <button>Search</button>
         </form>

@@ -5,7 +5,7 @@ function CardHourly({img,temperature,time}) {
     <div className='hourlycontainer'>
         <img src={img} alt="" />
         <p>{time}</p>
-        <p>{temperature}</p>
+        <p className='temphourly'>{temperature}</p>
     </div>
   )
 }

@@ -26,7 +26,7 @@ function Header() {
         <div onClick={toggleDropdown} className='dropdown'>
           <img src={units} alt="" />
           Units
-          <img src={arrow} alt="" />
+          <img className={isDropdown ? 'rotate' : ''} src={arrow} alt="" />
         </div>
         {isDropdown && <Units hidden={closing ? "hidden" : ""} />}      
       </div>

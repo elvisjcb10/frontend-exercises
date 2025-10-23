@@ -5,7 +5,7 @@ function CardDaily({day,img,maxTemperature,minTemperature}) {
     <div className='cardDaily'>
         <h3>{day}</h3>
         <img src={img} alt="" />
-        <p><span>{maxTemperature}</span> <span>{minTemperature}</span></p>
+        <p><span>{maxTemperature?maxTemperature+"°":""}</span> <span>{minTemperature?minTemperature+"°":""}</span></p>
     </div>
   )
 }

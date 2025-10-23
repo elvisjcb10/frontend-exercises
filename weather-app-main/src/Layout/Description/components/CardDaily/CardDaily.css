@@ -3,4 +3,22 @@
     height: 200px;
     background-color:var(--background-card);
     border-radius: 10px;
+    object-fit: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding:  10px 15px ;
+}
+.cardDaily img{
+    width: 100%;
+}
+.cardDaily p{
+    display: flex;
+    width: 100%;
+    font-size: 1.2rem;
+    justify-content: space-between;
+}
+.cardDaily h3{
+    font-weight: 500;
 }

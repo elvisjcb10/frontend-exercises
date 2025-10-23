@@ -44,34 +44,35 @@
 .description-text{
     width: 100%;
     height: 70%;
+    border-radius: 20px;
+    background-image: url('../../assets/images/bg-today-large.svg');
+    background-repeat:no-repeat;
+    background-size:cover; /* o cover según lo que necesites */
+    background-position: center; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+}
+.description-text h1{
+    font-size: 5rem;
+ }
+.description-text img{
+    width: 10%;
+    margin-left: auto;
+    margin-right: 40px;
+ }
+.loading{
+    width: 100%;
+    height: 70%;
     background-color: var(--background-card);
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .daily-container{
     display: flex;
     width: 100%;
     justify-content: space-between;
-}
-.hourlys{
-    height: 600px;
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding-right:20px ;
-}
-.hourlys::-webkit-scrollbar {
-  height: 5px; 
-  width: 5px;
-  
-}
-
-.hourlys::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 10px;
-}
-
-.hourlys::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
 }
