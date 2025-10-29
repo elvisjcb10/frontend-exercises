@@ -40,6 +40,8 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap :10px
 }
 .description-text{
     width: 100%;
@@ -75,4 +77,33 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+@media (max-width:900px) {
+  .container {
+    padding: 20px;
+    grid-template-areas:
+      "des"
+      "daily"
+      "hourly";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 15px;
+  }
+
+  .description,
+  .daily,
+  .hourly {
+    height: auto;
+  }
+
+  .description-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .description-text img {
+    width: 25%;
+    margin-right: 0;
+  }
 }

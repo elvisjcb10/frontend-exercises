@@ -8,7 +8,7 @@ const useFindCity=(name)=>{
             setIsLoading(true);
             setError(null)
             try{
-                const response= await fetch(`https://customer-geocoding-api.open-meteo.com/v1/search?apikey=&name=${name}&count=1`);
+                const response= await fetch(`https://customer-geocoding-api.open-meteo.com/v1/search?apikey=&name=${name}&count=20`);
                 const responseJson=await response.json();
                 setData(responseJson);
             }
